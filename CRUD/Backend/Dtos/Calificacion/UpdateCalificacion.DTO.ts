@@ -1,14 +1,10 @@
 import { IsString,  IsNotEmpty, IsMongoId, IsNumber } from "class-validator";
 
 export class UpdateEstudianteDto {
-  @IsMongoId()
-  id?: any;
 
+ 
   @IsNotEmpty()
-  asignatura: any;
-
-  @IsNotEmpty()
-  maestro: any;
+  maestro?: string;
 
   @IsString()
   @IsNotEmpty()

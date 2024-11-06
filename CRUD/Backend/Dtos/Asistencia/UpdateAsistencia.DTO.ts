@@ -1,8 +1,7 @@
 import { IsString,  IsNotEmpty, IsMongoId } from "class-validator";
 
 export class UpdateAsistenciaDto {
-  @IsMongoId()
-  id?: any;
+ 
 
   @IsString()
   @IsNotEmpty()

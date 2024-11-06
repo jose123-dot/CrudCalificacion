@@ -40,7 +40,7 @@ export class SaveMaestroDto {
   ciudad?: string;
 
   @IsNotEmpty()
-  asignatura: any; // Puedes ajustar el tipo de dato según el tipo de ID que uses para `asignatura`.
+  asignatura?: string; // Puedes ajustar el tipo de dato según el tipo de ID que uses para `asignatura`.
 
   @IsString()
   @IsNotEmpty()
