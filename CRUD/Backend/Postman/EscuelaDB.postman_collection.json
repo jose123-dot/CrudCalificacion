@@ -1,0 +1,610 @@
+{
+	"info": {
+		"_postman_id": "ced617c2-da48-43e7-a149-88a41e5655e9",
+		"name": "EscuelaDB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32405112"
+	},
+	"item": [
+		{
+			"name": "Estudiante",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/estudiante",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"estudiante"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Juan\",\r\n    \"apellido\": \"Pérez\",\r\n    \"matricula\": \"20231\",\r\n    \"tipoDocumento\": \"DNI\",\r\n    \"documento\": \"12345678\",\r\n    \"fechaNacimiento\": \"2000-01-01\",\r\n    \"direccion\": \"Calle 123\",\r\n    \"sector\": \"Centro\",\r\n    \"ciudad\": \"Barahona\",\r\n    \"estatus\": \"Activo\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/estudiante",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"estudiante"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Juan\",\r\n    \"apellido\": \"Pérez\",\r\n    \"matricula\": \"202301\",\r\n    \"tipoDocumento\": \"DNI\",\r\n    \"documento\": \"12345678\",\r\n    \"fechaNacimiento\": \"2000-01-01\",\r\n    \"direccion\": \"Calle 123\",\r\n    \"sector\": \"Centro\",\r\n    \"ciudad\": \"Barahona\",\r\n    \"estatus\": \"Activo\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/estudiante?id=672907bb25049d86766df94f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"estudiante"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "672907bb25049d86766df94f"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Juan\",\r\n    \"apellido\": \"Pérez\",\r\n    \"matricula\": \"202301\",\r\n    \"tipoDocumento\": \"DNISE\",\r\n    \"documento\": \"12345678\",\r\n    \"fechaNacimiento\": \"2000-01-04\",\r\n    \"direccion\": \"Calle 123\",\r\n    \"sector\": \"Centro\",\r\n    \"ciudad\": \"Barahonss\",\r\n    \"estatus\": \"Activo\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/estudiante?id=672aa4ff233d92b922931313",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"estudiante"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "672aa4ff233d92b922931313"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Asignatura",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/asignatura",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"asignatura"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Nombre de la Asignatura\",\r\n  \"estatus\": \"Activo\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/asignatura",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"asignatura"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Juan\",\r\n    \"apellido\": \"Pérez\",\r\n    \"matricula\": \"202301\",\r\n    \"tipoDocumento\": \"DNI\",\r\n    \"documento\": \"12345678\",\r\n    \"fechaNacimiento\": \"2000-01-01\",\r\n    \"direccion\": \"Calle 123\",\r\n    \"sector\": \"Centro\",\r\n    \"ciudad\": \"Barahona\",\r\n    \"estatus\": \"Activo\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/asignatura?id=672aad977fb75a6d66af9401",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"asignatura"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "672aad977fb75a6d66af9401"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Nombre de la Asignatura\",\r\n  \"estatus\": \"Inactivo\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/asignatura?id=672aada77fb75a6d66af9404",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"asignatura"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "672aada77fb75a6d66af9404"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Maestro",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/maestro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"maestro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Juan\",\r\n  \"apellido\": \"Pérez\",\r\n  \"matricula\": \"MTR1234\",\r\n  \"tipoDocumento\": \"DNI\",\r\n  \"documento\": \"123456789\",\r\n  \"fechaNacimiento\": \"1980-01-15\",\r\n  \"direccion\": \"Calle 123\",\r\n  \"sector\": \"Zona Centro\",\r\n  \"ciudad\": \"Ciudad Ejemplo\",\r\n  \"asignatura\": \"672aada77fb75a6d66af9404\",\r\n  \"estatus\": \"Activo\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/maestro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"maestro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Juan\",\r\n    \"apellido\": \"Pérez\",\r\n    \"matricula\": \"202301\",\r\n    \"tipoDocumento\": \"DNI\",\r\n    \"documento\": \"12345678\",\r\n    \"fechaNacimiento\": \"2000-01-01\",\r\n    \"direccion\": \"Calle 123\",\r\n    \"sector\": \"Centro\",\r\n    \"ciudad\": \"Barahona\",\r\n    \"estatus\": \"Activo\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/maestro?id=672ab20459f569f5462518fa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"maestro"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "672ab20459f569f5462518fa"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Juan\",\r\n  \"apellido\": \"Pérez\",\r\n  \"matricula\": \"MTR1234\",\r\n  \"tipoDocumento\": \"DNI\",\r\n  \"documento\": \"123456789\",\r\n  \"fechaNacimiento\": \"1980-01-15\",\r\n  \"direccion\": \"Calle 123\",\r\n  \"sector\": \"Zona Centro\",\r\n  \"ciudad\": \"Ciudad Ejemplo\",\r\n  \"asignatura\": \"672aada77fb75a6d66af9404\",\r\n  \"estatus\": \"Activa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/maestro?id=672ab20459f569f5462518fa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"maestro"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "672ab20459f569f5462518fa"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Calificacion",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/calificacion",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"calificacion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"asignatura\": \"672aada77fb75a6d66af9404\",\r\n  \"maestro\": \"672abab309016c344d6ef2f8\",\r\n  \"periodo\": \"2023-2024\",\r\n  \"nota1\": 85,\r\n  \"nota2\": 90,\r\n  \"nota3\": 88,\r\n  \"nota4\": 92,\r\n  \"notaFinal\": 89,\r\n  \"calificacion\": \"B\",\r\n  \"estatus\": \"Activo\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/calificacion",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"calificacion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Juan\",\r\n    \"apellido\": \"Pérez\",\r\n    \"matricula\": \"202301\",\r\n    \"tipoDocumento\": \"DNI\",\r\n    \"documento\": \"12345678\",\r\n    \"fechaNacimiento\": \"2000-01-01\",\r\n    \"direccion\": \"Calle 123\",\r\n    \"sector\": \"Centro\",\r\n    \"ciudad\": \"Barahona\",\r\n    \"estatus\": \"Activo\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/calificacion?id=672abaed09016c344d6ef2fc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"calificacion"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "672abaed09016c344d6ef2fc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"asignatura\": \"672aada77fb75a6d66af9404\",\r\n  \"maestro\": \"672abab309016c344d6ef2f8\",\r\n  \"periodo\": \"2023-2024\",\r\n  \"nota1\": 85,\r\n  \"nota2\": 90,\r\n  \"nota3\": 88,\r\n  \"nota4\": 92,\r\n  \"notaFinal\": 100,\r\n  \"calificacion\": \"B\",\r\n  \"estatus\": \"Activo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/calificacion?id=672abaed09016c344d6ef2fc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"calificacion"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "672abaed09016c344d6ef2fc"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Asistencia",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/asistencia",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"asistencia"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"periodo\": \"2023-2024\",\r\n  \"maestro\": \"672abab309016c344d6ef2f8\",\r\n  \"estudiante\": \"672aa4ff233d92b922931313\",\r\n  \"estatus\": \"Presente\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/asistencia",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"asistencia"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Juan\",\r\n    \"apellido\": \"Pérez\",\r\n    \"matricula\": \"202301\",\r\n    \"tipoDocumento\": \"DNI\",\r\n    \"documento\": \"12345678\",\r\n    \"fechaNacimiento\": \"2000-01-01\",\r\n    \"direccion\": \"Calle 123\",\r\n    \"sector\": \"Centro\",\r\n    \"ciudad\": \"Barahona\",\r\n    \"estatus\": \"Activo\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/asistencia?id=672abdc28fea4acda2ef449a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"asistencia"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "672abdc28fea4acda2ef449a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"periodo\": \"2023-2025\",\r\n  \"maestro\": \"672abab309016c344d6ef2f8\",\r\n  \"estudiante\": \"672aa4ff233d92b922931313\",\r\n  \"estatus\": \"Presente\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/asistencia?id=672abdc28fea4acda2ef449a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"asistencia"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "672abdc28fea4acda2ef449a"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

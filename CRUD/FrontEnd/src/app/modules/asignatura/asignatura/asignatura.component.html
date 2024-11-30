@@ -1,0 +1,8 @@
+
+    <div class=""  >
+      <app-datatable [iconColumns]="iconMenu" [columns]="columns" [data]="data"  [deleteData]="true" [editData]="true" (edit)="updateAsignatura($event)" [isActiveAccions]="true" (delete)="deleteAsignatura($event)" >
+        <app-create-asignatura (data)="refreshData()" ></app-create-asignatura>
+     
+      </app-datatable>  
+      <app-update-asignatura></app-update-asignatura> 
+    </div>

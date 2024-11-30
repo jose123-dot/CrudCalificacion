@@ -1,0 +1,144 @@
+<div class="">
+  <button 
+    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" 
+    (click)="openModal()">
+    Agregar Estudiante
+  </button>
+</div>
+
+<div class="w-full" *ngIf="isOpenModal">
+  <app-modal [title]="'Crear Estudiante'">
+    <form 
+      class="w-full max-w-l px-3"  
+      (ngSubmit)="createEstudiante()">
+      <div class="flex flex-col w-full -mx-3 mb-6">
+        <!-- Campo para Nombre -->
+        <div class="w-full mb-6">
+          <label 
+            class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" 
+            for="nombre">
+            Nombre
+          </label>
+          <input 
+            [(ngModel)]="estudiante.nombre" 
+            class="appearance-none block w-full text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white transition-all duration-300" 
+            id="nombre" 
+            type="text" 
+            placeholder="Nombre" 
+            name="nombre">
+        </div>
+        <!-- Campo para Apellido -->
+        <div class="w-full mb-6">
+          <label 
+            class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" 
+            for="apellido">
+            Apellido
+          </label>
+          <input 
+            [(ngModel)]="estudiante.apellido" 
+            class="appearance-none block w-full text-gray-700 border rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white transition-all duration-300" 
+            id="apellido" 
+            type="text" 
+            placeholder="Apellido" 
+            name="apellido">
+        </div>
+        <!-- Campos adicionales -->
+        <div class="w-full mb-6">
+          <label class="block text-gray-700 text-xs font-bold mb-2" for="matricula">Matrícula</label>
+          <input 
+            [(ngModel)]="estudiante.matricula" 
+            class="appearance-none block w-full text-gray-700 border rounded py-3 px-4 focus:outline-none focus:bg-white transition-all duration-300" 
+            id="matricula" 
+            type="text" 
+            placeholder="Matrícula" 
+            name="matricula">
+        </div>
+        <div class="w-full mb-6">
+          <label class="block text-gray-700 text-xs font-bold mb-2" for="tipoDocumento">Tipo de Documento</label>
+          <select 
+            [(ngModel)]="estudiante.tipoDocumento" 
+            class="block w-full text-gray-700 border rounded py-3 px-4 focus:outline-none focus:bg-white transition-all duration-300" 
+            id="tipoDocumento" 
+            name="tipoDocumento">
+            <option value="Cedula">Cédula</option>
+            <option value="Pasaporte">Pasaporte</option>
+          </select>
+        </div>
+        <div class="w-full mb-6">
+          <label class="block text-gray-700 text-xs font-bold mb-2" for="documento">Documento</label>
+          <input 
+            [(ngModel)]="estudiante.documento" 
+            class="appearance-none block w-full text-gray-700 border rounded py-3 px-4 focus:outline-none focus:bg-white transition-all duration-300" 
+            id="documento" 
+            type="text" 
+            placeholder="Documento" 
+            name="documento">
+        </div>
+        <div class="w-full mb-6">
+          <label class="block text-gray-700 text-xs font-bold mb-2" for="fechaNacimiento">Fecha de Nacimiento</label>
+          <input 
+            [(ngModel)]="estudiante.fechaNacimiento" 
+            class="appearance-none block w-full text-gray-700 border rounded py-3 px-4 focus:outline-none focus:bg-white transition-all duration-300" 
+            id="fechaNacimiento" 
+            type="date" 
+            name="fechaNacimiento">
+        </div>
+        <div class="w-full mb-6">
+          <label class="block text-gray-700 text-xs font-bold mb-2" for="direccion">Dirección</label>
+          <input 
+            [(ngModel)]="estudiante.direccion" 
+            class="appearance-none block w-full text-gray-700 border rounded py-3 px-4 focus:outline-none focus:bg-white transition-all duration-300" 
+            id="direccion" 
+            type="text" 
+            placeholder="Dirección" 
+            name="direccion">
+        </div>
+        <div class="w-full mb-6">
+          <label class="block text-gray-700 text-xs font-bold mb-2" for="sector">Sector</label>
+          <input 
+            [(ngModel)]="estudiante.sector" 
+            class="appearance-none block w-full text-gray-700 border rounded py-3 px-4 focus:outline-none focus:bg-white transition-all duration-300" 
+            id="sector" 
+            type="text" 
+            placeholder="Sector" 
+            name="sector">
+        </div>
+        <div class="w-full mb-6">
+          <label class="block text-gray-700 text-xs font-bold mb-2" for="ciudad">Ciudad</label>
+          <input 
+            [(ngModel)]="estudiante.ciudad" 
+            class="appearance-none block w-full text-gray-700 border rounded py-3 px-4 focus:outline-none focus:bg-white transition-all duration-300" 
+            id="ciudad" 
+            type="text" 
+            placeholder="Ciudad" 
+            name="ciudad">
+        </div>
+        <div class="w-full mb-6">
+          <label class="block text-gray-700 text-xs font-bold mb-2" for="estatus">Estatus</label>
+          <input 
+            [(ngModel)]="estudiante.estatus" 
+            class="appearance-none block w-full text-gray-700 border rounded py-3 px-4 focus:outline-none focus:bg-white transition-all duration-300" 
+            id="estatus" 
+            type="text" 
+            placeholder="Estatus" 
+            name="estatus">
+        </div>
+      </div>
+      <!-- Botones -->
+      <div class="flex justify-end mb-2">
+        <button 
+          class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded transition-all duration-300" 
+          (click)="closeModal()" 
+          type="button">
+          Cancelar
+        </button>
+        <button 
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-all duration-300" 
+          type="submit">
+          Guardar
+        </button>
+      </div>
+    </form>
+  </app-modal>
+</div>
+

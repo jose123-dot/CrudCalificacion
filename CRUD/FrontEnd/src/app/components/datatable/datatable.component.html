@@ -1,0 +1,73 @@
+<div class="flex justify-between p-2">
+  <div class="flex w-full justify-between items-center">
+    <div class="flex items-center">
+      <h5>Buscar:</h5>
+      <div class="relative">
+        <select class="px-6 py-1 border rounded" (change)="changePageSize(pageSize)">
+          <option *ngFor="let filter of columns" [value]="columns[0]">{{filter}}</option>
+        </select>
+        <span class="absolute right-2 top-1/2 transform -translate-y-1/2"></span>
+      </div>
+    </div>
+    <ng-content></ng-content>
+  </div>
+</div>
+
+<div class=" z-0 overflow-x-auto bg-white rounded-lg shadow overflow-y-auto relative">
+  <table class=" z-0 border-collapse table-auto w-full whitespace-no-wrap bg-white table-striped relative">
+    <thead>
+      <tr class="text-center z-10">
+        <th *ngFor="let column of columns" class="py-2 px-3 sticky border-slate-300 top-0 border-b text-white bg-slate-700">{{ transform(column) | titlecase }}</th>
+        <th class="py-2 px-3 sticky border-slate-300 top-0 border-b text-white bg-slate-700" *ngIf="isActiveAccions">Acciones</th>
+      </tr>
+    </thead>
+    <tbody class="text-center">
+      <tr *ngFor="let data of data.slice((pageNumber-1) * pageSize, pageNumber * pageSize)">
+        <td class="border-dashed border-t border-slate-300 px-3 py-2" *ngFor="let item of columns">
+          <ng-container *ngIf="iconColumns[item] !== undefined; else noIcon">
+          
+            <div *ngFor="let iconObjet of iconColumns[item]"  (click)="onView(data, iconColumns[item])">
+              <i class="{{iconObjet.icon}}"></i>
+            </div>
+          </ng-container>
+          
+          <ng-template #noIcon>{{ data?.[item.trim()] }}</ng-template>
+        </td>
+        <td class="border-dashed border-t border-slate-300 px-3 py-2" *ngIf="isActiveAccions">
+          <div class="flex justify-evenly">
+         
+
+            <i  *ngIf="editData" class="ri-pencil-line text-2xl text-blue-500 cursor-pointer hover:text-blue-900 transition-all duration-500" (click)="onEdit(data)" ></i>
+
+            <i *ngIf="deleteData" class="ri-delete-bin-4-line text-2xl text-red-600 cursor-pointer hover:text-red-900 transition-all duration-500" (click)="onDelete(data)" ></i>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="flex  justify-between items-center p-4">
+    <div>
+      <select class="px-2 py-1 border rounded" [(ngModel)]="pageSize" (change)="changePageSize(pageSize)">
+        <option *ngFor="let size of pageSizes" [value]="size">{{ size }}</option>
+      </select>
+    </div>
+    <div class="flex items-center" >
+      <div class="flex items-center">
+        <i [class]="pageNumber === 1 ? 'cursor-not-allowed pointer-events-none' : 'ri-arrow-left-s-line px-2 py-1 border rounded cursor-pointer'" (click)="changePage(pageNumber - 1)"></i>
+      </div>
+      <div class="flex space-x-2">
+        <button *ngFor="let page of [].constructor(totalPages); let i = index" class="px-2 py-1 border rounded" [class.bg-blue-500]="pageNumber === i+1" [class.text-white]="pageNumber === i+1" (click)="changePage(i + 1)">{{ i + 1 }}</button>
+      </div>
+      <i [class]="pageNumber  >= data.length / pageSize ? 'cursor-not-allowed pointer-events-none' : 'ri-arrow-right-s-line px-2 py-1 border rounded cursor-pointer'" (click)="changePage(pageNumber + 1)"></i>
+    
+    </div>
+    
+  </div>
+</div>
+
+<div class="">
+<ng-content select="[modalContent]"></ng-content>
+
+
+</div>

@@ -1,0 +1,8 @@
+
+    <div class=""  >
+      <app-datatable [iconColumns]="iconMenu" [columns]="columns" [data]="data"  [deleteData]="true" [editData]="true" (edit)="updateMaestro($event)" [isActiveAccions]="true" (delete)="deleteMaestro($event)" >
+        <app-create-maestro (data)="refreshData()" ></app-create-maestro>
+     
+      </app-datatable>  
+      <app-update-maestro></app-update-maestro> 
+    </div>

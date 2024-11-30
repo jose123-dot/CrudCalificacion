@@ -1,0 +1,11 @@
+<div class="grid sm:grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-4">
+  <div class="`w-full flex flex-col  p-4 rounded-lg shadow-lg {{card.fontColor}} border-t-4 {{card.borderColor}} transform transition duration-500 ease-in-out hover:scale-105 `" *ngFor="let card of dashboardCards">
+    <div class="flex items-center">
+      <i class="{{card.icon}} text-black text-3xl"></i>
+      <h2 class="ml-4 {{card.textColor}} text-2xl">{{card.name}}</h2>
+    </div>
+    <p class="text-black text-xl mt-2">{{10}}</p>
+  </div>
+
+
+</div>
